@@ -1,0 +1,9 @@
+server:
+  port: 8090
+
+# Database connection
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:25432/market
+    username: postgres_admin
+    password: postgres_admin
