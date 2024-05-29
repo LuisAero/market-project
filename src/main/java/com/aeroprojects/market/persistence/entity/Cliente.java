@@ -81,4 +81,5 @@ public class Cliente {
     public void setCompras(List<Compra> compras) {
         this.compras = compras;
     }
+
 }

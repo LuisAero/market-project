@@ -5,5 +5,4 @@ spring:
     name: market
 server:
   servlet:
-    context:
-      path: /market/api
+    context-path: /market/api

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/market/purchases")
+@RequestMapping("/purchases")
 public class PurchaseController {
 
     @Autowired
@@ -22,7 +22,7 @@ public class PurchaseController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<List<Purchase>> getgetByClient(@PathVariable("id") String clientId){
+    public ResponseEntity<List<Purchase>> getByClientId(@PathVariable("id") String clientId){
         return purchaseService.getByClient(clientId)
                 .map(purchases -> new ResponseEntity<>(purchases, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
